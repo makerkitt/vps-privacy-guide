@@ -38,17 +38,22 @@
 
 <p align="center">
   <a href="https://bandwagonhost.com/aff.php?aff=82641&pid=87">
-    <img src="https://img.shields.io/badge/%E5%8A%A0%E5%85%A5%E8%B4%AD%E7%89%A9%E8%BD%A6-%2449.99%2F%E4%B8%89%E4%B8%AA%E6%9C%88%20%C2%B7%201TB-1677ff?style=for-the-badge&logo=shopping-cart&logoColor=white" alt="加入购物车 · $49.99/三个月 · 1TB">
+    <img height="80" src="https://img.shields.io/badge/%E5%8A%A0%E5%85%A5%E8%B4%AD%E7%89%A9%E8%BD%A6-%2449.99%2F%E4%B8%89%E4%B8%AA%E6%9C%88%20%C2%B7%201TB-1677ff?style=for-the-badge&logo=shopping-cart&logoColor=white" alt="加入购物车 · $49.99/三个月 · 1TB">
   </a>
 </p>
 
-<p align="center">
-  <a href="https://bandwagonhost.com/aff.php?aff=82641&pid=87"><strong>加入购物车（$49.99 / 三个月 · 1TB）</strong></a>
-</p>
+### [加入购物车（$49.99 / 三个月 · 1TB）](https://bandwagonhost.com/aff.php?aff=82641&pid=87)
+
 
 为什么用搬瓦工：CN2 GIA / 电商线回国相对稳，季付好上手，机房选择多，面板和重装也成熟。代价也很实在——比杂牌贵，流量按月卡死在 1TB，1GB 内存别往上堆一堆无关服务。
 
-下单时选好机房，系统选 **Ubuntu 24.04**。付完把 IP、SSH 端口、用户名、本机密钥路径（或你设好的 SSH 别名）记下来，下一步要交给 AI。购买时更细的注意点见 [购买前要看什么](docs/buy-vps.md)。
+下单时选好机房，系统选 **Ubuntu 24.04**。付完后把下面几项记下来（下一步要交给 AI）：
+
+- IP 地址：
+- SSH 端口：
+- 用户名：
+- 登录方式（密钥路径，或密码——密码只写在本机，不要贴进聊天）：
+- SSH 别名（如果有）：
 
 ---
 
@@ -109,12 +114,11 @@ https://github.com/makerkitt/vps-privacy-guide
 
 ## 没有 AI 时：手工文档
 
-1. [购买前要看什么](docs/buy-vps.md)  
-2. [部署教程](docs/deployment.md)  
-3. [证书说明](docs/tls.md)  
-4. [客户端怎么接入](docs/clients.md)  
-5. [IP 防泄露检查](docs/leak-protection.md)  
-6. [检查清单](docs/verification.md)  
+1. [部署教程](docs/deployment.md)  
+2. [证书说明](docs/tls.md)  
+3. [客户端怎么接入](docs/clients.md)  
+4. [IP 防泄露检查](docs/leak-protection.md)  
+5. [检查清单](docs/verification.md)  
 
 备份、升级、连不上：看 [维护和排障](docs/maintenance.md)。不想用网页后台：也可以 [直接运行 sing-box](docs/standalone.md)。
 
