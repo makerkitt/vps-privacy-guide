@@ -1,0 +1,51 @@
+{
+  "log": { "level": "warn", "timestamp": true },
+  "dns": {
+    "servers": [{ "type": "udp", "tag": "resolver", "server": "1.1.1.1" }]
+  },
+  "inbounds": [
+    {
+      "type": "anytls",
+      "tag": "anytls-in",
+      "listen": "0.0.0.0",
+      "listen_port": 8443,
+      "users": [{ "name": "personal", "password": "__ANYTLS_PASSWORD__" }],
+      "tls": {
+        "enabled": true,
+        "certificate_path": "__CERTIFICATE_PATH__",
+        "key_path": "__KEY_PATH__"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-in",
+      "listen": "0.0.0.0",
+      "listen_port": 443,
+      "users": [{ "name": "personal", "password": "__HYSTERIA_PASSWORD__" }],
+      "tls": {
+        "enabled": true,
+        "certificate_path": "__CERTIFICATE_PATH__",
+        "key_path": "__KEY_PATH__"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "reality-in",
+      "listen": "0.0.0.0",
+      "listen_port": 443,
+      "users": [{ "name": "personal", "uuid": "__VLESS_UUID__", "flow": "xtls-rprx-vision" }],
+      "tls": {
+        "enabled": true,
+        "server_name": "__REALITY_SERVER_NAME__",
+        "reality": {
+          "enabled": true,
+          "handshake": { "server": "__REALITY_HANDSHAKE_SERVER__", "server_port": 443 },
+          "private_key": "__REALITY_PRIVATE_KEY__",
+          "short_id": ["__REALITY_SHORT_ID__"]
+        }
+      }
+    }
+  ],
+  "outbounds": [{ "type": "direct", "tag": "direct" }],
+  "route": { "final": "direct", "default_domain_resolver": "resolver" }
+}

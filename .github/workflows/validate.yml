@@ -1,0 +1,24 @@
+name: Validate
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  templates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check templates and Compose
+        run: |
+          python3 -m unittest discover -s tests -v
+          docker compose -f deploy/compose.yaml config --quiet
+          git diff --check
+      - name: Validate with pinned sing-box core
+        env:
+          VALIDATE_CORE: "1"
+        run: python3 -m unittest discover -s tests -v

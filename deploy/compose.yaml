@@ -1,0 +1,29 @@
+name: sui-vps
+
+services:
+  s-ui:
+    # S-UI v1.6.6; fixed multi-architecture manifest, reviewed 2026-10-26.
+    image: alireza7/s-ui:v1.6.6@sha256:c3cc6fa2d8fef0213923ec0aeeb46c912ff67179cbc6481b849b75d6720ed1d2
+    restart: unless-stopped
+    environment:
+      TZ: UTC
+    volumes:
+      - ./state/db:/app/db
+      - ./state/cert:/app/cert:ro
+    ports:
+      - "127.0.0.1:2095:2095/tcp"
+      - "127.0.0.1:2096:2096/tcp"
+      - "443:443/tcp"
+      - "8443:8443/tcp"
+      - "443:443/udp"
+    healthcheck:
+      test: ["CMD", "./sui", "healthcheck"]
+      interval: 30s
+      timeout: 5s
+      start_period: 30s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
