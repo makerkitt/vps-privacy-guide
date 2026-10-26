@@ -20,32 +20,35 @@
 
 ## 适合谁、要准备什么
 
-- **适合**：愿意自己买一台小 VPS、想自己管节点，并能接受跟着文档（或让 AI 陪着）操作的人。
+- **最适合**：需要**自己的节点**、对网络访问有要求的人——不想完全依赖别人机场，希望线路、账号、设备都在自己手里管。
+- **也适合**：愿意自己买一台小 VPS，并能接受跟着文档（或让 AI 陪着）把服务配起来的人。
 - **系统**：按 **Ubuntu 24.04** 写的；需要独立公网 IPv4、能 SSH、能装软件，且允许使用 UDP（Hysteria2 需要；另外两种走 TCP）。
 - **域名**：现在可以没有。AnyTLS / Hysteria2 也能用签给服务器 IP 的证书，见 [证书说明](docs/tls.md)。
 - **已有服务器**：也可以直接用现有机器跟着部署；没有的话，先买下面这台就够了。
 
 ## 先准备一台服务器
 
-本教程按 **搬瓦工** 来写。个人自用先买这台就行——**$49.99 / 年，每月 1TB 流量**，大概够 **1～2 人** 日常上网；开通后装 Ubuntu 24.04，就能接着往下配。
+本教程按 **搬瓦工** 来写。个人自用先买这台就行——**$49.99 / 三个月，每月 1TB 流量**，大概够 **1～2 人** 日常上网；开通后装 Ubuntu 24.04，就能接着往下配。
 
 | | |
 | --- | --- |
 | 硬盘 | 20 GB SSD |
 | 内存 | 1 GB |
 | CPU | 2 核 |
+| 带宽 | 2.5 Gbps |
 | 流量 | **1 TB / 月** |
-| 价格 | **$49.99 / 年** |
+| 价格 | **$49.99 / 三个月** |
 | 适合 | **1～2 人** 自用 |
+| 线路 | CN2 GIA 电商优化（多机房可选） |
 
 <p align="center">
-  <a href="https://bandwagonhost.com/aff.php?aff=82641&pid=44">
-    <img src="https://img.shields.io/badge/%E5%8A%A0%E5%85%A5%E8%B4%AD%E7%89%A9%E8%BD%A6-%2449.99%2F%E5%B9%B4%20%C2%B7%201TB-1677ff?style=for-the-badge&logo=shopping-cart&logoColor=white" alt="加入购物车 · $49.99/年 · 1TB">
+  <a href="https://bandwagonhost.com/aff.php?aff=82641&pid=87">
+    <img src="https://img.shields.io/badge/%E5%8A%A0%E5%85%A5%E8%B4%AD%E7%89%A9%E8%BD%A6-%2449.99%2F%E4%B8%89%E4%B8%AA%E6%9C%88%20%C2%B7%201TB-1677ff?style=for-the-badge&logo=shopping-cart&logoColor=white" alt="加入购物车 · $49.99/三个月 · 1TB">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://bandwagonhost.com/aff.php?aff=82641&pid=44"><strong>👉 一键加入购物车（$49.99 / 年 · 1TB）</strong></a>
+  <a href="https://bandwagonhost.com/aff.php?aff=82641&pid=87"><strong>👉 一键加入购物车（$49.99 / 三个月 · 1TB）</strong></a>
 </p>
 
 点进去会直接进搬瓦工下单页。选好机房，系统选 **Ubuntu 24.04**，付完记下 IP 和 SSH 登录信息，就可以去部署了。更细的购买注意点见 [购买前要看什么](docs/buy-vps.md)。
